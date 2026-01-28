@@ -1,0 +1,11 @@
+name: Run .NET App  on Push
+on: [push]
+jobs:
+  BuildAndRun:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Run console application
+        run: dotnet run
